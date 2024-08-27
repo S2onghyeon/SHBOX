@@ -69,7 +69,12 @@ public class HelloWorld {
 		// i = 0 부터 length(7) 작을때 까지 진행 
 		for (int i = 0; i < weeks.length; i++) { 
 			System.out.println(weeks[i]);
+			
+			
+		
 		}
 	}
 
 }
+
+
