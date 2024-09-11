@@ -58,7 +58,7 @@ public class AuthServiceApiV1 {
         userRepository.save(userEntityForSaving);
         return new ResponseEntity<>(
                 ResDTO.builder()
-                        .code(0)
+                        .code(0) // 정상종료 0 , 실패 1
                         .message("회원가입에 성공하였습니다.")
                         .build(),
                 HttpStatus.OK
