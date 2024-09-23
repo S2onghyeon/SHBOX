@@ -42,4 +42,3 @@ public class UserEntity {
     @OneToMany(mappedBy = "userEntity", fetch = FetchType.LAZY)
     private List<TodoEntity> todoEntityList;
 }
-// 자동으로 table 만들어짐

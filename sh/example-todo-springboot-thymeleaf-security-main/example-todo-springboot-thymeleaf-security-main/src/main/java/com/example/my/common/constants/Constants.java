@@ -22,4 +22,4 @@ public class Constants {
         public static final int EXCEPTION = -99;
     }
 
-} // 프로젝트 실행후 변경 시키지 않을것들
+}

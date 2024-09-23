@@ -7,9 +7,9 @@ import java.util.Optional;
 
 public interface UserRepository extends JpaRepository<UserEntity, Long> {
 
-    Optional<UserEntity> findByUsername(String username); //todo: select username from 'user' where name =? 같은뜻임
+    Optional<UserEntity> findByUsername(String username);
 
-    Optional<UserEntity> findByUsernameAndDeleteDateIsNull(String username); //todo: select username from 'user' where username =? and delete_date is null;
+    Optional<UserEntity> findByUsernameAndDeleteDateIsNull(String username);
 
-    Optional<UserEntity> findByIdAndDeleteDateIsNull(Long id); //todo: select id from 'user' where username = ? and delete_date is null
+    Optional<UserEntity> findByIdAndDeleteDateIsNull(Long id);
 }

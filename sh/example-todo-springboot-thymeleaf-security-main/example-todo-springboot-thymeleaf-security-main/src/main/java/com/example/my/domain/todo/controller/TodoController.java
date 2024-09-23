@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-@RequiredArgsConstructor //todo :
+@RequiredArgsConstructor
 public class TodoController {
 
     private final TodoService todoService;
@@ -19,6 +19,7 @@ public class TodoController {
     public ModelAndView todoTablePage(@AuthenticationPrincipal CustomUserDetails customUserDetails) {
         ModelAndView modelAndView = new ModelAndView();
 
+        // 시큐리티 없을 때의 코드
 //        if (session.getAttribute("loginUserDTO") == null) {
 //            modelAndView.setViewName("redirect:/auth/login");
 //            return modelAndView;
@@ -28,7 +29,7 @@ public class TodoController {
 
         ResTodoDTO dto = todoService.getTodoTableData(customUserDetails);
         modelAndView.addObject("dto", dto);
-        modelAndView.setViewName("todo/table");
+        modelAndView.setViewName("/todo/table");
         return modelAndView;
     }
 
